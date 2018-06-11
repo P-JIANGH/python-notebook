@@ -58,3 +58,7 @@ else:
 ```
 
 `break` 与 `continue` 功能与其他语言相同
+
+### 函数
+
+[函数](https://p-jiangh.github.io/python-notebook/syntax/function)

@@ -13,3 +13,15 @@ tuple = (1,)
 * python的代码结构是用缩进控制的，块语句别忘了冒号
 
 * input()的返回类型是str
+
+* 默认参数必须使用不可变值，如果要声明为可变值，需要使用下面代码的方式check
+
+```python
+def func(param=None):
+  if param is None:
+    param = []
+  ..operations
+  return
+```
+
+* dict型与JSON类似，注意避免混淆
