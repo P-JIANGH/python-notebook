@@ -2,27 +2,13 @@
 
 ### 数据类型
 
-1. 整数
+[基本数据类型](https://p-jiangh.github.io/python-notebook/docs/syntax/data-type#基本数据类型)
 
-2. 浮点数
+[集合数据类型](https://p-jiangh.github.io/python-notebook/docs/syntax/data-type#集合数据类型)
 
-3. 字符串
+[不可变对象和可变对象](https://p-jiangh.github.io/python-notebook/docs/syntax/data-type#不可变对象和可变对象)
 
-4. 布尔值
-
-5. 空值
-
-6. 变量
-
-### 集合数据类型
-
-1. list `list = [1, 2, 3]`
-
-2. tuple `list = (1, 2, 3)`
-
-3. dict `list = {a: 1, b: 2}`
-
-4. set `list = (['a', 'b'])`
+[切片操作](https://p-jiangh.github.io/python-notebook/docs/syntax/data-type#切片操作)
 
 ### 结构控制语句
 
@@ -44,8 +30,14 @@ else:
 `for` 循环：
 
 ```python
-  for x in [1, 2, 3]:
+  for x in [1, 2, 3]:         # 迭代单值
     print(x)
+
+  for i, x in [1, 2, 3]:      # 迭代单值， 索引-元素对
+    print(x)
+
+  for x, y in [(1, 2), (2, 3), (3, 4)]:      # 迭代多值
+    print(x, y)
 ```
 
 `while` 循环：
@@ -66,3 +58,7 @@ else:
 [函数参数](https://p-jiangh.github.io/python-notebook/docs/syntax/function#函数参数)
 
 [递归函数](https://p-jiangh.github.io/python-notebook/docs/syntax/function#递归函数)
+
+### 列表生成式与生成器(generator)
+
+[]
