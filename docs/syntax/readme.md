@@ -61,8 +61,8 @@ else:
 
 ### 列表生成式与生成器(generator)
 
-[列表生成式](https://p-jiangh.github.io/python-notebook/docs/syntax/function#列表生成式)
+[列表生成式](https://p-jiangh.github.io/python-notebook/docs/syntax/generator#列表生成式)
 
-[列表生成器](https://p-jiangh.github.io/python-notebook/docs/syntax/function#列表生成器)
+[列表生成器](https://p-jiangh.github.io/python-notebook/docs/syntax/generator#列表生成器)
 
-[生成器函数generator](https://p-jiangh.github.io/python-notebook/docs/syntax/function#生成器函数)
+[生成器函数generator](https://p-jiangh.github.io/python-notebook/docs/syntax/generator#生成器函数)
