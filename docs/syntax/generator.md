@@ -63,4 +63,18 @@ print(next(gen))
 
 #### 生成器函数
 
+在普通函数中加上`yield`关键字，即变成生成器函数。
+生成器函数与普通函数运行方式不同，每次被迭代或者被`next()`调用时，只执行到下一个`yield`的位置
+想要得到`return`的值则只能通过捕获异常之后，通过`error.value`获得。
+
+```py
+# 斐波那契数列生成器
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+```
 
