@@ -66,3 +66,9 @@ else:
 [列表生成器](https://p-jiangh.github.io/python-notebook/docs/syntax/generator#列表生成器)
 
 [生成器函数generator](https://p-jiangh.github.io/python-notebook/docs/syntax/generator#生成器函数)
+
+### 函数式编程
+
+[函数式编程](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#函数式编程)
+
+[高阶函数及举例](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#高阶函数及举例)
