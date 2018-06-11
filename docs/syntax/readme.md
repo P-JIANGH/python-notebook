@@ -61,4 +61,8 @@ else:
 
 ### 函数
 
-[函数](https://p-jiangh.github.io/python-notebook/syntax/function)
+[函数声明](https://p-jiangh.github.io/python-notebook/docs/syntax/function#函数声明)
+
+[函数参数](https://p-jiangh.github.io/python-notebook/docs/syntax/function#函数参数)
+
+[递归函数](https://p-jiangh.github.io/python-notebook/docs/syntax/function#递归函数)
