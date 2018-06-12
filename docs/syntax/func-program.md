@@ -88,9 +88,25 @@ print(L2)
 
 ### 返回函数
 
+既函数的返回值是一个函数
+
+```py
+def foo(x):
+  def func():
+    print(x);
+  return func
+
+foo1 = foo(1)
+foo1()    # => 1
+```
+
 ### lambda关键字：匿名函数
 
 匿名函数即没有函数名的函数
+
+```py
+lambda x: x + 1
+```
 
 与其他语言lambda表达式的比较：
 
@@ -110,16 +126,69 @@ fun = lambda x: x + 2
 print(fun(2))
 ```
 
-### 装饰器
+### 函数装饰器
+
+装饰器基于装饰器设计模式，在不改变原有实现的基础上为其添加*新的功能*
+
+与`JavaScript`的装饰器类似，以`@expr`的形式写在方法前面即可
+
+无参装饰器原理：将被修饰的函数`func`作为参数传入装饰器函数`foo`中，返回新函数`wrapper`给原函数指针`func`
+
+写法如下：
+
+```py
+def foo(func):
+  def wrapper(*args, **kw):
+    print('call %s' % func.__name__)  # 要执行的操作
+    return func(*arg, **kw)
+  return wrapper
+```
+
+有参装饰器原理：将装饰器的参数`'message'`传入装饰器函数`foo`，再返回一个新的装饰器函数`decorator`，
+再将被修饰的函数`func`作为参数传入被返回的新的装饰器函数`decorator`中执行操作后，返回新的函数`wrapper`给原函数指针`func`
+
+写法如下：
+
+```py
+def foo(msg):
+  def decorator(func):
+    def wrapper(*args, **kw):
+      print('call ' + msg + ' %s' % func.__name__)  # 要执行的操作
+      return func(*arg, **kw)
+    return wrapper
+  return decorator
+```
+
+作用等效写法：
+
+```py
+@foo
+def func:
+  ...
+# 等同于
+func = foo(func)
+
+# 带参数的装饰器
+@foo('message')
+def func:
+  ...
+# 等同于
+func = foo('message')(func)
+```
+
+实现一个下列功能的装饰器：
+
+1. 在函数执行前后分别打log
+2. 只用一个装饰器函数，使其既支持有参数的写法，同时也支持无参数写法
 
 ```py
 # coding=utf-8
-import functools
+from functools import wraps
 from types import FunctionType
 
 def log(arg):
   if isinstance(arg, FunctionType):     # 没有参数，直接修饰函数，以函数为参的情况
-    @functools.wraps(arg)
+    @wraps(arg)
     def wrapper(*args, **kw):
       print('begin call')
       result = arg(*args, **kw)
@@ -128,7 +197,7 @@ def log(arg):
     return wrapper
   else:                                 # 有参数，返回值修饰函数情况
     def decorator(func):
-      @functools.wraps(arg)
+      @wraps(arg)
       def wrapper(*args, **kw):
         print('begin call' + arg)
         result = func(*args, **kw)
@@ -145,3 +214,18 @@ f(1, 2, 3, 4)
 ```
 
 ### 偏函数
+
+在对函数进行柯里化时，可以使用环境内建函数`functools.partial`将被操作函数的一个参数进行固定，来生成一个缺省参数的新函数
+
+新函数即为原函数的偏函数（与数学中的偏导数不是一回事）
+
+```py
+from functools import partial
+int('12345', base=8)  # 5349
+int('101', base=2)    # 5
+# 创建偏函数
+int8 = partial(int, base=8)
+int2 = partial(int, base=2)
+int8('12345')   # 5349
+int2('101')     # 5
+```

@@ -72,3 +72,16 @@ else:
 [函数式编程](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#函数式编程)
 
 [高阶函数及举例](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#高阶函数及举例)
+
+  * [map](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#map)
+  * [reduce](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#reduce)
+  * [filter](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#filter)
+  * [sorted](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#sorted)
+
+[返回函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#返回函数)
+
+[lambda关键字：匿名函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#lambda关键字：匿名函数)
+
+[函数装饰器](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#函数装饰器)
+
+[偏函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#偏函数)
