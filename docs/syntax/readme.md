@@ -50,3 +50,28 @@
 [函数装饰器](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#函数装饰器)
 
 [偏函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#偏函数)
+
+### 面向对象编程
+
+[类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#类)
+
+  * [类定义](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#类定义)
+  * [构造器](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#构造器)
+  * [私有属性](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#私有属性)
+  * [property](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#property)
+  * [实例属性和类属性](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#实例属性和类属性)
+  * [动态添加属性和方法](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#动态添加属性和方法)
+
+[继承与多态](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#继承与多态)
+
+  * [继承](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#继承)
+  * [多态](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#多态)
+  * [isinstance关键字](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#isinstance关键字)
+
+[定制类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#定制类)
+
+  * [__str__与__repr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__str__与__repr__)
+  * [__iter__与__next__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__iter__与__next__)
+  * [__getitem__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getitem__)
+  * [__getattr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getattr__)
+  * [__call__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__call__)
