@@ -72,9 +72,9 @@
 
   * [\_\_str\_\_与\_\_repr_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__str__与__repr__)
   * [\_\_iter\_\_与\_\_next\_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__iter__与__next__)
-  * [__getitem__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getitem__)
-  * [__getattr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getattr__)
-  * [__call__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__call__)
+  * [\_\_getitem\_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getitem__)
+  * [\_\_getattr\_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getattr__)
+  * [\_\_call\_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__call__)
 
 [装饰器类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#装饰器类)
 
