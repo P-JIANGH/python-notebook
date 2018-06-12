@@ -70,8 +70,8 @@
 
 [定制类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#定制类)
 
-  * [__str__与__repr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__str__与__repr__)
-  * [__iter__与__next__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__iter__与__next__)
+  * [\_\_str\_\_与\_\_repr_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__str__与__repr__)
+  * [\_\_iter\_\_与\_\_next\_\_](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__iter__与__next__)
   * [__getitem__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getitem__)
   * [__getattr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getattr__)
   * [__call__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__call__)
