@@ -47,7 +47,7 @@
 
 [lambda关键字：匿名函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#lambda关键字：匿名函数)
 
-[函数装饰器](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#函数装饰器)
+[装饰器函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#装饰器函数)
 
 [偏函数](https://p-jiangh.github.io/python-notebook/docs/syntax/func-program#偏函数)
 
@@ -75,3 +75,5 @@
   * [__getitem__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getitem__)
   * [__getattr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getattr__)
   * [__call__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__call__)
+
+[枚举类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#枚举类)

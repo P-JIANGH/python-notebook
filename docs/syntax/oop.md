@@ -347,3 +347,133 @@ print(url.api.home.docs.xxx)
 对于实例是否是可调用的实例，可以用`callable(instance)`测试
 
 更多定制方法需要参着[Python官方文档](https://docs.python.org/3/reference/datamodel.html#special-method-names)
+
+#### 装饰器类
+
+定义类中提到的`__call__`方法可以让一个类的实例能够被调用，装饰器类就是使用了这种做法实现的
+
+```py
+class Logable(object):
+  def __init__(self, func):
+    self.__func = func
+
+  def __call__(self, *args, **kw):
+    print('call %s start' % self.__func.__name__)
+    result = self.__func(*args, **kw)
+    print('call %s end' % self.__func.__name__)
+    return result
+
+@Logable
+def add(x, y):
+  print('add result %d' % (x + y))
+  return x + y
+
+# 等同于：
+# def add(x, y):
+#   print('add result %d' % (x + y))
+#   return x + y
+
+# add = Logable(add)
+
+print(add(3, 4))
+# >>> call add start
+# >>> add result 7
+# >>> call add end
+# >>> 7
+```
+
+但是，被装饰器类修饰过的方法会变成该类的一个实例
+
+#### 类装饰器
+
+##### 无参类装饰器
+
+我们会遇到使用装饰器来装饰类的情况，类装饰器和函数装饰器稍有不同，因为执行时传入的参数是一个类的构造器
+
+```py
+class Singleton(object):
+  def __init__(self, clazz):
+    self.__class = clazz
+    self.__instance = None
+
+  def __call__(self, *args, **kw):
+    if self.__instance == None:
+      print('No instance, create new one')
+      self.__instance = self.__class(*args, **kw)
+    return self.__instance
+
+@Singleton
+class Student(object):
+  pass
+
+# 等同于：
+# class Student(object):
+#   pass
+
+# Student = Singleton(Student)
+
+a = Student()
+b = Student()
+c = Student()
+
+print(a, b, c, Student)
+```
+
+关键代码：`Student = Singleton(Student)`是创建一个类`Singleton`的实例，执行`Singleton`的`__init__`方法。
+使得`Student`本身是`Singleton`的一个实例。所以执行`a = Student()`时才会进入`Singleton`的`__call__`方法。
+
+##### 有参类装饰器
+
+与无参类装饰器思路类似，看代码：
+
+```py
+class Singleton(object):
+  def __init__(self, msg):
+    self.msg = msg
+  def __call__(self, clazz):
+    msg = self.msg
+
+    class decorator(object):
+      def __init__(self, clazz):
+        self.clazz = clazz
+        self.instance = None
+
+      def __call__(self, *args, **kw):
+        if self.instance == None:
+          print('Create a New Instance with msg: %s' % msg)
+          self.instance = self.clazz(*args, *kw)
+        return self.instance
+
+    return decorator(clazz)
+
+@Singleton('Singleton')
+class Student(object):
+  pass
+
+# 等同于
+# class Student(object):
+#   pass
+# # Student = Singleton('Singleton')(Student)
+
+a = Student()
+b = Student()
+c = Student()
+
+print(a, b, c, Student)
+# >>> Create a New Instance with msg: Singleton
+# >>><__main__.Student object at 0x01BD07F0> <__main__.Student object at 0x01BD07F0> <__main__.Student object at 0x01BD07F0> <__main__.Singleton.__call__.<locals>.decorator object at 0x01BD07D0>
+```
+
+#### 枚举类
+
+枚举类有`enum`包提供，使用时先`import`进来。在声明自己的类继承`Enum`。使用时可以引入`enum`包的`unique`装饰器
+
+```py
+from enum import Enum, unique
+
+@unique
+class BUTTON_TYPE(Enum):
+  START = 1
+  BACK = 2
+  QUIT = 3
+```

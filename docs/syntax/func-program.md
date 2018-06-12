@@ -129,7 +129,7 @@ fun = lambda x: x + 2
 print(fun(2))
 ```
 
-### 函数装饰器
+### 装饰器函数
 
 装饰器基于装饰器设计模式，在不改变原有实现的基础上为其添加*新的功能*
 
@@ -219,6 +219,8 @@ f(1, 2, 3, 4)
 functools.wrapsとは？
 
 使用装饰器函数会导致原函数的`__name__`等元数据丢失，系统提供了`functools.wraps`装饰器，可以防止原函数的元数据丢失
+
+关于[装饰器类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#装饰器类)
 
 ### 偏函数
 
