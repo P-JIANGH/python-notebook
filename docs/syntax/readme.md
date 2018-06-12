@@ -76,4 +76,11 @@
   * [__getattr__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__getattr__)
   * [__call__](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#__call__)
 
+[装饰器类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#装饰器类)
+
+[类装饰器](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#类装饰器)
+
+  * [无参类装饰器](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#无参类装饰器)
+  * [有参类装饰器](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#有参类装饰器)
+
 [枚举类](https://p-jiangh.github.io/python-notebook/docs/syntax/oop#枚举类)
