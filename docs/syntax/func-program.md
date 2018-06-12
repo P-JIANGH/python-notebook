@@ -111,6 +111,7 @@ lambda x: x + 1
 与其他语言lambda表达式的比较：
 
 ```java
+/* java */
 List<String> strList = new ArrayList<>();
 strList.add("a");
 ...;
@@ -118,10 +119,12 @@ strList.forEach(x -> System.out.println(x));
 ```
 
 ```js
+/* Javascript */
 cosnt func = () => {};
 ```
 
 ```py
+# Python
 fun = lambda x: x + 2
 print(fun(2))
 ```
