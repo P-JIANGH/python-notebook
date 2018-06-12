@@ -237,7 +237,7 @@ print(type(lambda x: x + 1) == LambdaType)
 
 定制类即重写类的系统方法，类似之前看到的`__init__`，`__new__`等方法。
 
-##### __str__与__repr__
+##### \_\_str\_\_与\_\_repr\_\_
 
 重写`__str__`可以定制`print()`输出出来的内容
 重写`__repr__`可以定制直接在交互环境中输出变量的内容
@@ -253,7 +253,7 @@ print(stu)
 # >>> print Student
 ```
 
-##### __iter__与__next__
+##### \_\_iter\_\_与\_\_next\_\_
 
 如果想让一个类可以使用for...in循环迭代，就需要实现`__iter__`方法和`__next__`
 
@@ -278,7 +278,7 @@ for x in f:
   print(x)
 ```
 
-##### __getitem__
+##### \_\_getitem\_\_
 
 如果想让一个类是可索引的，就需要实现`__getitem__`方法
 
@@ -314,7 +314,7 @@ print(d[6])
 
 与它对应的有`__setitem__`设置一个元素和`__delitem__`删除一个元素
 
-##### __getattr__
+##### \_\_getattr\_\_
 
 在取得对象的属性时，调用的是`__getattr__`方法，当要取得一个不存在的属性时，可以先实现`__getattr__`来动态返回值
 
@@ -340,7 +340,7 @@ print(url.api.home.docs.xxx)
 # >>> /api/home/docs/xxx/
 ```
 
-##### __call__
+##### \_\_call\_\_
 
 如果想让类的实例都像一个函数一样可以被调用，就需要实现`__call__`方法
 
