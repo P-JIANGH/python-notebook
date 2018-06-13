@@ -419,6 +419,8 @@ c = Student()
 print(a, b, c, Student)
 ```
 
+以上是一个单例模式的代码，可以在`__init__`的方法中调用被修饰类的构造器，来更简洁的实现单例模式
+
 关键代码：`Student = Singleton(Student)`是创建一个类`Singleton`的实例，执行`Singleton`的`__init__`方法。
 使得`Student`本身是`Singleton`的一个实例。所以执行`a = Student()`时才会进入`Singleton`的`__call__`方法。
 
